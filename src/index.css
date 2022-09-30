@@ -1,0 +1,12 @@
+@import-normalize; /* bring in normalize.css styles */
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+/* rest of app styles */
+body {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1;
+  font-family: 'Josefin Sans', cursive;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
