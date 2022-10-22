@@ -1,16 +1,15 @@
 import React from 'react';
 import Slider from "react-slick";
+import ImageAdam from '../media/adam_neely.jpg';
+import ImageStan from '../media/stan_bicknell.jpg';
+import ImageJoses from '../media/joses_rio.jpg';
+import ImageSoulMountain from '../media/soul_mountain.jpg';
+import ImagePaulTurner from '../media/paul_turner.jpg';
+import ImageFlea from '../media/flea.jpg';
+import ImageAsato from '../media/mateus_asato.jpg';
+import ImageClark from '../media/clark_kent.jpg';
 
 function MonoCreators() {
-  let ImageAdam = require('../media/adam_neely.jpg');
-  let ImageStan = require('../media/stan_bicknell.jpg');
-  let ImageJoses = require('../media/joses_rio.jpg');
-  let ImageSoulMountain = require('../media/soul_mountain.jpg');
-  let ImagePaulTurner = require('../media/paul_turner.jpg');
-  let ImageFlea = require('../media/flea.jpg');
-  let ImageAsato = require('../media/mateus_asato.jpg');
-  let ImageClark = require('../media/clark_kent.jpg');
-
   let settings = {
     dots: true,
     arrows: false,

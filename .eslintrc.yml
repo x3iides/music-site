@@ -1,0 +1,71 @@
+root: true
+parser: "@babel/eslint-parser"
+extends:
+- react-app
+- airbnb-base
+- plugin:react/recommended
+- plugin:jsx-a11y/recommended
+- prettier
+plugins:
+- import
+- jsx-a11y
+- prettier
+rules:
+  consistent-return: ["warn"]
+  func-call-spacing: 2
+  import/no-cycle: ["warn"]
+  import/no-unresolved: ["warn"]
+  import/prefer-default-export: off
+  indent: [2, 2, { SwitchCase: 1, "ignoredNodes": ["TemplateLiteral"] }]
+  jsx-a11y/anchor-is-valid: off
+  jsx-a11y/click-events-have-key-events: off
+  jsx-a11y/interactive-supports-focus: off
+  jsx-a11y/no-noninteractive-element-interactions: off
+  key-spacing: [2, { beforeColon: false, afterColon: true }]
+  no-console: off
+  no-nested-ternary: ["warn"]
+  no-multiple-empty-lines: ["error", { max: 1 }]
+  no-trailing-spaces: 2
+  no-unused-vars: ["warn"]
+  object-curly-spacing: ["error", "always"]
+  quotes: ["error", "single"]
+  radix: off
+  react/jsx-key: ["warn"]
+  react/jsx-curly-brace-presence: ["error", "never"]
+  react/jsx-no-target-blank: off
+  react/no-unknown-property:
+    [
+      "error",
+      {
+        ignore:
+          [
+            "css",
+            "gpt-data-type",
+            "gpt-data-slug",
+            "gpt-data-category",
+            "gpt-data-post-id",
+            "gpt-data-post-categories",
+            "gpt-data-post-show-ads",
+            "redirect",
+          ],
+      },
+    ]
+  react/react-in-jsx-scope: off
+  react/prop-types: off
+  react-hooks/exhaustive-deps: off
+  semi: 2
+  semi-spacing: [2, { before: false, after: true }]
+  space-before-function-paren: ["error", "never"]
+  space-before-blocks: [error, always]
+  space-in-parens: [error, never]
+  space-infix-ops: 2
+  space-unary-ops: [2, { words: true, nonwords: false }]
+  spaced-comment: [2, always]
+settings:
+  import/resolver:
+    node:
+      paths:
+      - src
+      extensions:
+      - ".js"
+      - ".jsx"
