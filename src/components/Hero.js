@@ -1,11 +1,10 @@
-import React from 'react';
 import imgWooten from '../media/wooten-slide.jpg';
 
 function Hero() {
   return (
     <div className='hero_banner relative'>
       <div className='hero_image'>
-        <img fetchpriority="high" width='542' height='290' src={imgWooten} alt='hero_image'/>
+        <img width='542' height='290' src={imgWooten} alt='hero_image'/>
       </div>
 
       <div className='texts text-white flex justify-center items-center bg-black md:bg-gradient-to-l from-black md:bg-opacity-25 relative md:absolute md:inset-0 text-center md:text-left py-8'>
