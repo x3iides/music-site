@@ -1,30 +1,19 @@
-.container {
-    padding-left: 1rem;
-    padding-right: 1rem;
-
-    @media (min-width: 576px) {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-  }
-
 .landing {
     font-family: Josefin Sans;
-
     .hero_banner {
-        position: relative;
-        background-color: #f0f0f0;
-
         .hero_image {
             height: calc(85vh - 100px);
             min-height: 420px;
             max-height: 500px;
             overflow: hidden;
-            background-image: url('../media/wooten-slide.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
 
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                overflow: hidden;
+            }
+        }
         .texts {
             .wrapper {
                 .title {
@@ -40,11 +29,8 @@
                 }
 
                 button {
-                    text-transform: uppercase;
-                    color: white;
                     border: 0;
                     padding: .75rem 2rem;
-                    background-color: #ff6347;
                     border-radius: .25rem;
 
                     &:hover {
@@ -57,13 +43,7 @@
     }
     
     .mono_creators {
-        background-color: #000;
-        color: white;
-
         .section_title {
-            display: flex;
-            align-items: center;
-            justify-content: center;
             margin-bottom: 5rem;
             padding-top: 3rem;
 
@@ -72,7 +52,6 @@
                 margin-bottom: 4rem;
             }
         }
-
         .creators {
             padding-bottom: 5rem;
             .item_card {
@@ -86,13 +65,13 @@
                     margin-bottom: 1.5rem;
                 }
             }
-
             .slick-dots {
                 li {
-                    width: .8rem;
-                    height: .8rem;
+                    width: .9rem;
+                    height: .9rem;
                     border-radius: 50%;
                     background: white;
+                    margin-right: 1rem;
 
                     &.slick-active {
                         background: orangered;
@@ -109,21 +88,13 @@
     }
 
     .listing {
-        padding: 1rem 0 5rem;
-        @media (max-width: 992px) {
-            padding: 0 0 4rem;
-        }
-
-
         .single_row {
             .row_inner {
                 padding: 1.5rem 1rem;
-                border-bottom: 1px solid #aaa;
-
-                .row_head {
-                    color: orangered;
-                    font-weight: bold;
-                    margin-bottom: 1rem;
+            }
+            &:not(:last-child) {
+                .row_inner {
+                    border-bottom: 1px solid #aaa;
                 }
             }
         }

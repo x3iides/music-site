@@ -1,16 +1,16 @@
 import React from 'react';
-import '../index.css';
 import Slider from "react-slick";
-import ImageAdam from '../media/adam_neely.jpg';
-import ImageStan from '../media/stan_bicknell.jpg';
-import ImageJoses from '../media/joses_rio.jpg';
-import ImageSoulMountain from '../media/soul_mountain.jpg';
-import ImagePaulTurner from '../media/paul_turner.jpg';
-import ImageFlea from '../media/flea.jpg';
-import ImageAsato from '../media/mateus_asato.jpg';
-import ImageClark from '../media/clark_kent.jpg';
 
 function MonoCreators() {
+  let ImageAdam = require('../media/adam_neely.jpg');
+  let ImageStan = require('../media/stan_bicknell.jpg');
+  let ImageJoses = require('../media/joses_rio.jpg');
+  let ImageSoulMountain = require('../media/soul_mountain.jpg');
+  let ImagePaulTurner = require('../media/paul_turner.jpg');
+  let ImageFlea = require('../media/flea.jpg');
+  let ImageAsato = require('../media/mateus_asato.jpg');
+  let ImageClark = require('../media/clark_kent.jpg');
+
   let settings = {
     dots: true,
     arrows: false,
@@ -30,37 +30,27 @@ function MonoCreators() {
     {name: 'Soul Mountain', img: ImageSoulMountain},
   ]
 
-  function Card(props) {
-    return (
-      <div className='lg:basis-1/3 md:basis-1/2 item_card md:px-4 text-center font-bold text-xl md:text-2xl'>
-        <img className='w-full' alt={props.artist_name} src={props.source}/>
-        {props.artist_name}
-      </div>
-    );
-  }
-
   function renderCard(name, imageSrc) {
     return (
-      <Card
-        key={name}
-        artist_name={name}
-        source={imageSrc}>
-      </Card>
+      <div key={name} className='lg:basis-1/3 md:basis-1/2 item_card md:px-4 text-center font-bold text-xl md:text-2xl'>
+        <img fetchpriority="low" width='300' height='300' loading='lazy' className='w-full' alt={name} src={imageSrc}/>
+        {name}
+      </div>
     )
   }
 
   return (
-    <div className='mono_creators'>
+    <div className='mono_creators bg-black text-white'>
       
         <div className='section_title'>
-          <div className='container flex flex-wrap gap-4 justify-center items-center md:max-w-screen-xl max-w-screen-md'>
+          <div className='container flex flex-wrap gap-4 px-4 md:px-8 justify-center items-center md:max-w-screen-xl max-w-screen-md mx-auto'>
             <span className='flex-initial uppercase text-3xl md:text-5xl font-bold'>#monocreators</span>
             <span className='flex-initial uppercase text-3xl md:text-5xl font-bold'>#goplay</span>
           </div>
         </div>
 
         <div className="creators">
-          <div className='container mx-auto md:max-w-screen-xl max-w-screen-md'>
+          <div className='container px-4 md:px-8 mx-auto md:max-w-screen-xl max-w-screen-md'>
             <div className='hidden md:flex flex-wrap justify-center'>
 
               {artistData.map((artist) => (
